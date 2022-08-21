@@ -23,8 +23,9 @@ public class MovieLibraryApp {
                     MovieLibrary.getRandomMovieInformation();
                     break;
                 case DISPLAYACTORSFROMMOVIE:
-                    System.out.println("Film wg aktora");
-                    // TODO - do napisania pozniej
+                    MovieLibrary.printActorFilmography();
+                    // TODO Pobranie nazwiska aktora od uzytkownika
+                    // TODO Metoda filtrujaca
                     break;
                 case EXITAPPLICATION:
                     System.out.println("Zamykanie aplikacji...");
