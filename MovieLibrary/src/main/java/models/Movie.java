@@ -36,4 +36,23 @@ public class Movie {
     public void setListofActors(List<Actor> listofActors) {
         this.listofActors = listofActors;
     }
+
+    private String printActorsInOneLine(){
+        var actorsInOneRow = new StringBuilder();
+        String separator = "";
+        for (Actor listofActor : listofActors) {
+            actorsInOneRow.append(separator+listofActor+"");
+            separator=", ";
+        }
+        return actorsInOneRow.toString();
+    }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "title='" + title + '\'' +
+                ", director=" + director +
+                ", listofActors=" + printActorsInOneLine();
+
+    }
 }
